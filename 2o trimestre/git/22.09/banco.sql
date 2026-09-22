@@ -23,4 +23,4 @@ CREATE TABLE IF NOT EXISTS participantes (
 
 -- Usuário padrão para login (Senha: 123456)
 INSERT INTO usuarios (nome, email, senha) VALUES 
-('Organizador', 'admin@ifrs.edu.br', '$2y$10$wO8IeY7yvR6lXf4XgJ7j/eJ5K1jE7K5J7K5J7K5J7K5J7K5J7K5J7');
+('Organizador', 'admin@ifrs.edu.br', '123456');
