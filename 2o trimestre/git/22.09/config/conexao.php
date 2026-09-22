@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $db   = 'churrasco';
-$user = 'root';
-$pass = '';
+$user = 'admin@ifrs.edu.br';
+$pass = '123456';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass);
