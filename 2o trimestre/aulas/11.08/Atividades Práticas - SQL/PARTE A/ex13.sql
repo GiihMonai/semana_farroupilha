@@ -1,0 +1,1 @@
+SELECT * FROM produto WHERE val_unit BETWEEN 3.00 AND 20.00;

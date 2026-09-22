@@ -1,0 +1,1 @@
+SELECT * FROM cliente WHERE endereco IS NULL;

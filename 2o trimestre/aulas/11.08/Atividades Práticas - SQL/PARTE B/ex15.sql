@@ -1,0 +1,1 @@
+SELECT * FROM produto ORDER BY val_unit DESC;

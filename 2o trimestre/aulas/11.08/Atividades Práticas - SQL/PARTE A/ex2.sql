@@ -1,0 +1,1 @@
+SELECT cod_prod, desc_prod, unid_prod, val_unit FROM produto;

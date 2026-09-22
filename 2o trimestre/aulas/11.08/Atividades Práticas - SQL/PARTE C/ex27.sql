@@ -1,0 +1,1 @@
+SELECT p.num_ped, c.nome_cli, v.nome_vend, p.prazo_entr FROM pedido p INNER JOIN cliente c ON p.cd_cli = c.cod_cli INNER JOIN vendedor v ON p.cd_vend = v.cod_vend;

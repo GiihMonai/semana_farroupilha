@@ -1,0 +1,1 @@
+SELECT * FROM produto WHERE val_unit > 10.00;

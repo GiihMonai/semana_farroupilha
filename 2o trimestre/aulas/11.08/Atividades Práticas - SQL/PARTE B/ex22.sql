@@ -1,0 +1,1 @@
+SELECT faixa_comiss, AVG(sal_fixo) AS salario_medio FROM vendedor GROUP BY faixa_comiss;

@@ -1,0 +1,1 @@
+SELECT * FROM produto ORDER BY desc_prod ASC;

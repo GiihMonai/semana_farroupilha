@@ -1,0 +1,1 @@
+SELECT cod_cli, nome_cli, cidade, uf FROM cliente;

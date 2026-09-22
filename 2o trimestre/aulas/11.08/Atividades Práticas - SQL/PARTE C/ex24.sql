@@ -1,0 +1,1 @@
+SELECT c.nome_cli, v.nome_vend FROM cliente c CROSS JOIN vendedor v;

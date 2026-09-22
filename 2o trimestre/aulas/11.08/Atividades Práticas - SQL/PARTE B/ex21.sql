@@ -1,0 +1,1 @@
+SELECT uf, COUNT(*) AS quantidade FROM cliente GROUP BY uf;

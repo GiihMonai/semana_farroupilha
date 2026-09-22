@@ -1,0 +1,1 @@
+SELECT * FROM vendedor ORDER BY sal_fixo DESC;

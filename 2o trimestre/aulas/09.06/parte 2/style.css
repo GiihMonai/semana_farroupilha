@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e4d6ffff;
+    color: #050018;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fbf8ffff;
+    border: 2px solid #6518d8ff;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid #8e56ffff;
+    padding-bottom: 15px;
+}
+
+h2 {
+    background-color: #8e56ffff;
+    margin-top: 40px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+h2:first-of-type {
+    margin-top: 20px;
+}
+
+b {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+br + br {
+    display: block;
+    margin-top: 10px;
+}
+
+.erro, :contains("Erro:"), :contains("insufficiente"), :contains("inválido") {
+    color: #c30909ff;
+    font-weight: bold;
+}
+
+.dados-conta {
+    background-color: #fbf8ffff;
+    border: 2px solid #6518d8ff;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.sucesso {
+    color: #0bba6c;
+    font-weight: 600;
+}
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #050018;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 5px;
+    border: 2px solid #8e56ffff;
+    background-color: #fbf8ffff;
+    border-radius: 4px;
+    color: #050018;
+    outline: none;
+}
+
+input:focus {
+    border-color: #6518d8ff;
+    box-shadow: 0 0 5px rgba(142, 86, 255, 0.4);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #8e56ffff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #6518d8ff;
+}
+
+.botoes-grupo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn-sucesso { background-color: #0bba6c; }
+.btn-sucesso:hover { background-color: #099456; }
+.btn-erro { background-color: #c30909ff; }
+.btn-erro:hover { background-color: #9c0707; }
+
+.btn-bloco {
+    background-color: #6518d8ff;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #8e56ffff;
+    margin: 15px 0;
+    opacity: 0.3;
+}
+
+.alerta {
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sucesso-box {
+    background-color: #d1f7e4;
+    color: #099456;
+    border: 1px solid #0bba6c;
+}
+
+.erro-box {
+    background-color: #fcdad6;
+    color: #c30909ff;
+    border: 1px solid #c30909ff;
+}
+
+.saldo-valor {
+    font-size: 18px;
+    color: #6518d8ff;
+    font-weight: 700;
+}
+
+.btn-limpar {
+    background: transparent;
+    border: 1px dashed #c30909ff;
+    color: #c30909ff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn-limpar:hover {
+    background: #fcdad6;
+}

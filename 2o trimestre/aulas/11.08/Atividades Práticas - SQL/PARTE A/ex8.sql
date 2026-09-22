@@ -1,0 +1,1 @@
+SELECT * FROM cliente WHERE uf NOT IN ('RJ', 'SP');

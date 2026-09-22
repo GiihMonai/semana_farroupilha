@@ -1,0 +1,1 @@
+SELECT ip.no_ped AS numero_pedido, pr.desc_prod, ip.qtd_ped AS quantidade, pr.val_unit, (ip.qtd_ped * pr.val_unit) AS subtotal FROM item_pedido ip INNER JOIN produto pr ON ip.cd_prod = pr.cod_prod;

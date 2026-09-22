@@ -1,0 +1,1 @@
+SELECT SUM(sal_fixo) AS soma_salarios FROM vendedor;

@@ -1,0 +1,1 @@
+SELECT MAX(val_unit) AS maior_preco, MIN(val_unit) AS menor_preco, AVG(val_unit) AS preco_medio FROM produto;

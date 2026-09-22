@@ -1,0 +1,1 @@
+SELECT p.num_ped, v.nome_vend, p.prazo_entr FROM pedido p INNER JOIN vendedor v ON p.cd_vend = v.cod_vend;

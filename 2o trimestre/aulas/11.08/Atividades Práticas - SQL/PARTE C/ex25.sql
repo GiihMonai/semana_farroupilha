@@ -1,0 +1,1 @@
+SELECT p.num_ped, c.nome_cli, p.prazo_entr FROM pedido p INNER JOIN cliente c ON p.cd_cli = c.cod_cli;

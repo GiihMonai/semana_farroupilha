@@ -1,0 +1,1 @@
+SELECT * FROM produto WHERE desc_prod LIKE 'C%';

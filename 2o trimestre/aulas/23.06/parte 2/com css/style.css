@@ -1,0 +1,80 @@
+:root {
+    --fluff: #f4b5de;
+    --poison: #7058fd;
+    --busy: #fa58a7;
+    --zoom: black;
+    --meeting: #03e29d;
+}
+
+body {
+    background-color: var(--zoom);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-servico {
+    background-color: rgb(30, 30, 30);
+    border: 3px solid var(--poison);
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+    max-width: 600px;
+}
+
+h2 {
+    color: var(--poison);
+    margin-top: 0;
+    border-bottom: 2px dashed var(--fluff);
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: var(--meeting);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 5px 0 15px 0;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+strong {
+    color: var(--fluff);
+}
+
+.pecas-lista {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.pecas-lista li {
+    background: var(--zoom);
+    margin-bottom: 8px;
+    padding: 10px;
+    border-left: 4px solid var(--meeting);
+    border-radius: 4px;
+}
+
+.total-container {
+    background-color: var(--busy);
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-transform: uppercase;
+}

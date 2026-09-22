@@ -1,0 +1,1 @@
+SELECT DISTINCT uf FROM cliente;

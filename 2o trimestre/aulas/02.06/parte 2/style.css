@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #E8ECEF; 
+    color: #1C2B48; 
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #C4D8E5; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(28, 43, 72, 0.15); 
+    border: 1px solid #A7C7E7;
+}
+
+h1 {
+    color: #1C2B48;
+    margin-top: 0;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.sub-titulo {
+    text-align: center;
+    color: #576574;
+    margin-top: -10px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+h2 {
+    color: #1C2B48;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #A7C7E7;
+    padding-bottom: 5px;
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #1C2B48;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    background-color: #E8ECEF; 
+    border: 2px solid #A7C7E7;
+    border-radius: 6px;
+    color: #1C2B48;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #8EB1D1;
+    outline: none;
+}
+
+button {
+    color: #ffffff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: #1C2B48;
+}
+
+.btn-primary:hover {
+    background-color: #2c3e66;
+}
+
+.btn-secondary {
+    background-color: #8EB1D1;
+    color: #1C2B48;
+}
+
+.btn-secondary:hover {
+    background-color: #769cbF;
+}
+
+.box-resultado {
+    background-color: #E8ECEF; 
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+    border-left: 5px solid #1C2B48;
+}
+
+.box-resultado h3 {
+    color: #1C2B48;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.linha-status {
+    font-size: 15px;
+    margin: 8px 0;
+    color: #2c3e50;
+}
+
+.separador {
+    border-top: 1px solid #C4D8E5;
+    margin: 12px 0;
+}

@@ -1,0 +1,1 @@
+SELECT * FROM vendedor WHERE sal_fixo BETWEEN 1800.00 AND 2500.00;

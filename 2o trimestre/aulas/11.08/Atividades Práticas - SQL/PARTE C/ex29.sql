@@ -1,0 +1,1 @@
+SELECT p.num_ped, c.nome_cli, v.nome_vend, pr.desc_prod AS produto, ip.qtd_ped AS quantidade, pr.val_unit, (ip.qtd_ped * pr.val_unit) AS subtotal FROM pedido p INNER JOIN cliente c ON p.cd_cli = c.cod_cli INNER JOIN vendedor v ON p.cd_vend = v.cod_vend INNER JOIN item_pedido ip ON p.num_ped = ip.no_ped INNER JOIN produto pr ON ip.cd_prod = pr.cod_prod ORDER BY p.num_ped;

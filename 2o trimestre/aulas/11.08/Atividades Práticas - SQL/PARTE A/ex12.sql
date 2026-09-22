@@ -1,0 +1,1 @@
+SELECT * FROM produto WHERE unid_prod = 'kg' AND val_unit > 4.00;
