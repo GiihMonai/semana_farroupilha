@@ -2,7 +2,6 @@
 session_start();
 require '../config/conexao.php';
 
-// Bloqueio extra no backend
 if (!isset($_SESSION['usuario_id'])) { die('Acesso negado.'); }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
