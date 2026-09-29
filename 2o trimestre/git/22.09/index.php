@@ -1,7 +1,6 @@
 <?php
 require_once 'config/conexao.php';
 
-// Exercício 16: Consultas calculadas diretamente no banco de dados
 $totalInscritos = $pdo->query("SELECT COUNT(*) FROM participantes")->fetchColumn();
 $confirmados    = $pdo->query("SELECT COUNT(*) FROM participantes WHERE confirmado = 1")->fetchColumn();
 $naoConfirmados = $pdo->query("SELECT COUNT(*) FROM participantes WHERE confirmado = 0")->fetchColumn();
@@ -10,7 +9,6 @@ $pendentes      = $pdo->query("SELECT COUNT(*) FROM participantes WHERE pago = 0
 $tradicional    = $pdo->query("SELECT COUNT(*) FROM participantes WHERE tipo_churrasco = 'Tradicional'")->fetchColumn();
 $vegetariano    = $pdo->query("SELECT COUNT(*) FROM participantes WHERE tipo_churrasco = 'Vegetariano'")->fetchColumn();
 
-// Ajuste nos caminhos de visualização do cabeçalho quando na raiz
 require_once 'includes/cabecalho.php';
 ?>
 

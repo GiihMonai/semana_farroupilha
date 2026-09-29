@@ -1,5 +1,4 @@
 <?php
-require_once '../includes/verificar_login.php';
 require_once '../includes/cabecalho.php';
 ?>
 
