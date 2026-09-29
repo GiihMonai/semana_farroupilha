@@ -1,18 +1,27 @@
-<?php require 'includes/cabecalho.php'; ?>
+<?php
+require_once "../includes/cabecalho.php";
+?>
 
 <h2>Cadastrar Participante</h2>
+
 <form action="salvar.php" method="POST">
-    <label>Nome Completo:</label>
-    <input type="text" name="nome" required>
-    
-    <label>Email:</label>
-    <input type="email" name="email" required>
-    
-    <label>Telefone:</label>
-    <input type="text" name="telefone" placeholder="(00) 00000-0000">
-    
-    <button type="submit" class="btn">Salvar Cadastro</button>
-    <a href="listar.php" class="btn" style="background-color: #ddd; color: #333;">Cancelar</a>
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" id="telefone">
+    </div>
+
+    <button type="submit" class="btn">Salvar</button>
+    <a href="listar.php">Cancelar</a>
 </form>
 
-<?php require 'includes/rodape.php'; ?>
+<?php require_once "../includes/rodape.php"; ?>

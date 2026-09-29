@@ -1,42 +1,45 @@
 <?php
-require 'config/conexao.php';
-require 'includes/cabecalho.php';
+require_once "../config/conexao.php";
+require_once "../includes/cabecalho.php";
 
-$stmt = $pdo->query("SELECT * FROM participantes ORDER BY id DESC");
+$sql = "SELECT * FROM participantes ORDER BY id DESC";
+$stmt = $pdo->query($sql);
 $participantes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <h2>Lista de Participantes</h2>
-<a href="cadastrar.php" class="btn">Cadastrar Novo Participante</a>
+<a href="cadastrar.php" class="btn btn-primary">Cadastrar Novo</a>
 
 <table>
     <thead>
         <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>Email</th>
+            <th>E-mail</th>
             <th>Telefone</th>
             <th>Ações</th>
         </tr>
     </thead>
     <tbody>
-        <?php if(count($participantes) > 0): ?>
+        <?php if (count($participantes) > 0): ?>
             <?php foreach ($participantes as $p): ?>
-            <tr>
-                <td><?php echo $p['id']; ?></td>
-                <td><?php echo htmlspecialchars($p['nome']); ?></td>
-                <td><?php echo htmlspecialchars($p['email']); ?></td>
-                <td><?php echo htmlspecialchars($p['telefone']); ?></td>
-                <td>
-                    <a href="editar.php?id=<?php echo $p['id']; ?>" class="btn">Editar</a>
-                    <button onclick="confirmarExclusao(<?php echo $p['id']; ?>)" class="btn btn-danger">Excluir</button>
-                </td>
-            </tr>
+                <tr>
+                    <td><?= htmlspecialchars($p['id']) ?></td>
+                    <td><?= htmlspecialchars($p['nome']) ?></td>
+                    <td><?= htmlspecialchars($p['email']) ?></td>
+                    <td><?= htmlspecialchars($p['telefone']) ?></td>
+                    <td>
+                        <a href="editar.php?id=<?= $p['id'] ?>">Editar</a> | 
+                        <a href="excluir.php?id=<?= $p['id'] ?>" onclick="return confirm('Deseja realmente excluir?')">Excluir</a>
+                    </td>
+                </tr>
             <?php endforeach; ?>
         <?php else: ?>
-            <tr><td colspan="5">Nenhum participante cadastrado.</td></tr>
+            <tr>
+                <td colspan="5">Nenhum participante encontrado.</td>
+            </tr>
         <?php endif; ?>
     </tbody>
 </table>
 
-<?php require 'includes/rodape.php'; ?>
+<?php require_once "../includes/rodape.php"; ?>
