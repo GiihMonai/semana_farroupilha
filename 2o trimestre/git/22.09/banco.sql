@@ -1,26 +1,23 @@
-CREATE DATABASE IF NOT EXISTS churrasco CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE churrasco;
+CREATE DATABASE IF NOT EXISTS sistema;
+USE sistema;
 
-CREATE TABLE IF NOT EXISTS usuarios (
+-- Tabela para o sistema de Login
+CREATE TABLE usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS participantes (
+-- Tabela do CRUD
+CREATE TABLE participantes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    turma VARCHAR(50) NOT NULL,
-    telefone VARCHAR(20),
-    tipo_churrasco VARCHAR(30) NOT NULL,
-    acompanhamento VARCHAR(50),
-    confirmado BOOLEAN NOT NULL,
-    pago BOOLEAN NOT NULL
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20)
 );
 
+-- Inserindo um usuário administrador padrão
+-- Email: admin@admin.com | Senha: 123
 INSERT INTO usuarios (nome, email, senha) VALUES 
-('Organizador', 'admin@ifrs.edu.br', '123456');
-
-INSERT INTO usuarios (nome, email, senha) 
-VALUES ('Administrador', 'admin@ifrs.edu.br', '$2y$10$eImiTXuWVxfM37uY4JANjOL.8844ZXE.2D.y8H4/o34xJqCjC.wme');
+('Administrador', 'admin@admin.com', '$2y$10$CMyLIfb.9X7I24U6X0K1.eE89bQ11p9xPqF/uFvA/K3K/8zN3W1Tq');

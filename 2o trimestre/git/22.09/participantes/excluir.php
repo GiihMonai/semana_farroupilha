@@ -1,13 +1,17 @@
 <?php
-require_once '../config/conexao.php';
+session_start();
+require '../config/conexao.php';
 
-$id = $_GET['id'] ?? 0;
+if (!isset($_SESSION['usuario_id'])) { die('Acesso negado.'); }
 
-$stmt = $pdo->prepare("DELETE FROM participantes WHERE id = :id");
+$id = $_GET['id'] ?? null;
 
-$stmt->execute([
-    ':id' => $id
-]);
-
-header('Location: listar.php');
-exit();
+if ($id) {
+    $stmt = $pdo->prepare("DELETE FROM participantes WHERE id = ?");
+    if ($stmt->execute([$id])) {
+        header("Location: listar.php");
+    } else {
+        echo "<script>alert('Erro ao excluir!'); window.location='listar.php';</script>";
+    }
+}
+?>

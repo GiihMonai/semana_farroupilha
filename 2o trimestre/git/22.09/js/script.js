@@ -1,35 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const formCadastro = document.getElementById('formCadastro');
-
-    if (formCadastro) {
-        formCadastro.addEventListener('submit', function (e) {
-            const nome = document.getElementById('nome').value.trim();
-            const turma = document.getElementById('turma').value.trim();
-            const tipoChurrasco = document.getElementById('tipo_churrasco').value;
-            const telefone = document.getElementById('telefone').value.trim();
-
-            let erros = [];
-
-            if (nome === '') {
-                erros.push('O campo Nome é obrigatório.');
-            }
-
-            if (turma === '') {
-                erros.push('O campo Turma é obrigatório.');
-            }
-
-            if (tipoChurrasco === '') {
-                erros.push('Escolha um Tipo de Churrasco.');
-            }
-
-            if (telefone !== '' && telefone.length < 8) {
-                erros.push('Se preenchido, o telefone deve ter no mínimo 8 dígitos.');
-            }
-
-            if (erros.length > 0) {
-                e.preventDefault();
-                alert(erros.join('\n'));
-            }
-        });
+function confirmarExclusao(id) {
+    if (confirm("Tem certeza que deseja excluir este participante? A ação não pode ser desfeita.")) {
+        window.location.href = "excluir.php?id=" + id;
     }
-});
+}

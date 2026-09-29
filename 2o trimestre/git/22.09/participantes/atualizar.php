@@ -1,43 +1,21 @@
 <?php
-require_once '../config/conexao.php';
+session_start();
+require '../config/conexao.php';
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: listar.php');
-    exit();
+if (!isset($_SESSION['usuario_id'])) { die('Acesso negado.'); }
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $id = $_POST['id'];
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+
+    $stmt = $pdo->prepare("UPDATE participantes SET nome = ?, email = ?, telefone = ? WHERE id = ?");
+    
+    if ($stmt->execute([$nome, $email, $telefone, $id])) {
+        header("Location: listar.php");
+    } else {
+        echo "<script>alert('Erro ao atualizar!'); window.history.back();</script>";
+    }
 }
-
-$id = (int) $_POST['id'];
-
-$nome = trim($_POST['nome']);
-$turma = trim($_POST['turma']);
-$telefone = trim($_POST['telefone']);
-$tipo_churrasco = trim($_POST['tipo_churrasco']);
-$acompanhamento = trim($_POST['acompanhamento']);
-$confirmado = (int) $_POST['confirmado'];
-$pago = (int) $_POST['pago'];
-
-$sql = "UPDATE participantes SET
-            nome = :nome,
-            turma = :turma,
-            telefone = :telefone,
-            tipo_churrasco = :tipo_churrasco,
-            acompanhamento = :acompanhamento,
-            confirmado = :confirmado,
-            pago = :pago
-        WHERE id = :id";
-
-$stmt = $pdo->prepare($sql);
-
-$stmt->execute([
-    ':nome' => $nome,
-    ':turma' => $turma,
-    ':telefone' => $telefone,
-    ':tipo_churrasco' => $tipo_churrasco,
-    ':acompanhamento' => $acompanhamento,
-    ':confirmado' => $confirmado,
-    ':pago' => $pago,
-    ':id' => $id
-]);
-
-header('Location: listar.php');
-exit();
+?>
