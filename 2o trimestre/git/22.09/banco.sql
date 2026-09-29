@@ -19,8 +19,3 @@ CREATE TABLE IF NOT EXISTS participantes (
     pago BOOLEAN NOT NULL
 );
 
-INSERT INTO usuarios (nome, email, senha) VALUES 
-('Organizador', 'admin@ifrs.edu.br', '123456');
-
-INSERT INTO usuarios (nome, email, senha) 
-VALUES ('Administrador', 'admin@ifrs.edu.br', '$2y$10$eImiTXuWVxfM37uY4JANjOL.8844ZXE.2D.y8H4/o34xJqCjC.wme');
