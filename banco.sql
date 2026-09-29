@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS sistema_db;
+USE sistema_db;
+
+DROP TABLE IF EXISTS participantes;
+
+CREATE TABLE participantes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20),
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
