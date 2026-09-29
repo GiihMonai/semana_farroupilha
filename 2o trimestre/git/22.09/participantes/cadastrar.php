@@ -1,4 +1,4 @@
-<?php require '../includes/cabecalho.php'; ?>
+<?php require 'includes/cabecalho.php'; ?>
 
 <h2>Cadastrar Participante</h2>
 <form action="salvar.php" method="POST">
@@ -15,4 +15,4 @@
     <a href="listar.php" class="btn" style="background-color: #ddd; color: #333;">Cancelar</a>
 </form>
 
-<?php require '../includes/rodape.php'; ?>
+<?php require 'includes/rodape.php'; ?>

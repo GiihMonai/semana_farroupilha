@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../config/conexao.php';
+require 'config/conexao.php';
 
 if (!isset($_SESSION['usuario_id'])) { die('Acesso negado.'); }
 

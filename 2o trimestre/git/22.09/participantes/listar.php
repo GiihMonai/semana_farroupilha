@@ -1,6 +1,6 @@
 <?php
-require '../config/conexao.php';
-require '../includes/cabecalho.php';
+require 'config/conexao.php';
+require 'includes/cabecalho.php';
 
 $stmt = $pdo->query("SELECT * FROM participantes ORDER BY id DESC");
 $participantes = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -39,4 +39,4 @@ $participantes = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </tbody>
 </table>
 
-<?php require '../includes/rodape.php'; ?>
+<?php require 'includes/rodape.php'; ?>

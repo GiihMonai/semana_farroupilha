@@ -1,6 +1,6 @@
 <?php
-require '../config/conexao.php';
-require '../includes/cabecalho.php';
+require 'config/conexao.php';
+require 'includes/cabecalho.php';
 
 $id = $_GET['id'] ?? null;
 if (!$id) { die("ID não fornecido."); }
@@ -29,4 +29,4 @@ if (!$p) { die("Participante não encontrado."); }
     <a href="listar.php" class="btn" style="background-color: #ddd; color: #333;">Cancelar</a>
 </form>
 
-<?php require '../includes/rodape.php'; ?>
+<?php require 'includes/rodape.php'; ?>
