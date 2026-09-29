@@ -19,7 +19,6 @@ if (session_status() === PHP_SESSION_NONE) {
                 <a href="../index.php">Início</a>
                 <a href="../participantes/cadastrar.php">Nova Inscrição</a>
                 <a href="../participantes/listar.php">Participantes</a>
-                <a href="../auth/logout.php" class="btn-sair">Sair</a>
             </nav>
         <?php endif; ?>
     </header>
