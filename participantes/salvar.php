@@ -1,20 +1,32 @@
 <?php
-require_once "../config/conexao.php";
+require_once '../config/conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = trim($_POST['nome']);
-    $email = trim($_POST['email']);
+    $turma = trim($_POST['turma']);
     $telefone = trim($_POST['telefone']);
+    $tipo_churrasco = $_POST['tipo_churrasco'];
+    $acompanhamento = $_POST['acompanhamento'] ?? '';
+    $confirmado = (int)$_POST['confirmado'];
+    $pago = (int)$_POST['pago'];
 
-    if (!empty($nome) && !empty($email)) {
-        $sql = "INSERT INTO participantes (nome, email, telefone) VALUES (:nome, :email, :telefone)";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindValue(':nome', $nome);
-        $stmt->bindValue(':email', $email);
-        $stmt->bindValue(':telefone', $telefone);
-        $stmt->execute();
+    $sql = "INSERT INTO participantes (nome, turma, telefone, tipo_churrasco, acompanhamento, confirmado, pago) 
+            VALUES (:nome, :turma, :telefone, :tipo_churrasco, :acompanhamento, :confirmado, :pago)";
+    
+    $stmt = $pdo->prepare($sql);
+    $executou = $stmt->execute([
+        ':nome' => $nome,
+        ':turma' => $turma,
+        ':telefone' => $telefone,
+        ':tipo_churrasco' => $tipo_churrasco,
+        ':acompanhamento' => $acompanhamento,
+        ':confirmado' => $confirmado,
+        ':pago' => $pago
+    ]);
+
+    if ($executou) {
+        header('Location: listar.php?msg=sucesso');
+        exit;
     }
 }
-
-header("Location: listar.php");
-exit;
+?>

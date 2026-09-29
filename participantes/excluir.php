@@ -1,14 +1,13 @@
 <?php
-require_once "../config/conexao.php";
+require_once '../config/conexao.php';
 
 $id = $_GET['id'] ?? null;
 
 if ($id) {
-    $sql = "DELETE FROM participantes WHERE id = :id";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindValue(':id', $id);
-    $stmt->execute();
+    $stmt = $pdo->prepare("DELETE FROM participantes WHERE id = :id");
+    $stmt->execute([':id' => $id]);
 }
 
-header("Location: listar.php");
+header('Location: listar.php?msg=sucesso');
 exit;
+?>
