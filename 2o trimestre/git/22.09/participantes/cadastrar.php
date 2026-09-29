@@ -11,13 +11,13 @@ require_once '../includes/cabecalho.php';
 
     <form action="salvar.php" method="POST" id="formCadastro">
         <div class="campo-form">
-            <label for="nome">Nome Completo *:</label>
+            <label for="nome">Nome Completo:</label>
             <input type="text" id="nome" name="nome">
         </div>
 
         <div class="campo-form">
-            <label for="turma">Turma *:</label>
-            <input type="text" id="turma" name="turma" placeholder="Ex: INFO 2">
+            <label for="turma">Turma:</label>
+            <input type="text" id="turma" name="turma" placeholder="Ex: 2 INFO">
         </div>
 
         <div class="campo-form">
@@ -26,7 +26,7 @@ require_once '../includes/cabecalho.php';
         </div>
 
         <div class="campo-form">
-            <label for="tipo_churrasco">Tipo de Churrasco *:</label>
+            <label for="tipo_churrasco">Tipo de Churrasco:</label>
             <select id="tipo_churrasco" name="tipo_churrasco">
                 <option value="">Selecione...</option>
                 <option value="Tradicional">Tradicional</option>
@@ -40,13 +40,13 @@ require_once '../includes/cabecalho.php';
         </div>
 
         <div class="campo-form">
-            <label>Presença Confirmada *:</label>
+            <label>Presença Confirmada:</label>
             <label><input type="radio" name="confirmado" value="1"> Sim</label>
             <label><input type="radio" name="confirmado" value="0" checked> Não</label>
         </div>
 
         <div class="campo-form">
-            <label>Pagamento Realizado *:</label>
+            <label>Pagamento Realizado:</label>
             <label><input type="radio" name="pago" value="1"> Sim</label>
             <label><input type="radio" name="pago" value="0" checked> Não</label>
         </div>

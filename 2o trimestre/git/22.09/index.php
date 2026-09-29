@@ -49,7 +49,6 @@ require_once 'includes/cabecalho.php';
     <div class="acoes-rapidas">
         <a href="participantes/cadastrar.php" class="btn">Nova inscrição</a>
         <a href="participantes/listar.php" class="btn">Participantes</a>
-        <a href="auth/logout.php" class="btn btn-danger">Sair</a>
     </div>
 </div>
 

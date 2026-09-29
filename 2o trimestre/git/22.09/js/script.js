@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let erros = [];
 
-            // Validações obrigatórias (Exercício 7)
             if (nome === '') {
                 erros.push('O campo Nome é obrigatório.');
             }
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 erros.push('Escolha um Tipo de Churrasco.');
             }
 
-            // Dado adicional escolhido para verificação (Exercício 7)
             if (telefone !== '' && telefone.length < 8) {
                 erros.push('Se preenchido, o telefone deve ter no mínimo 8 dígitos.');
             }
