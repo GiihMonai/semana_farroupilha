@@ -12,6 +12,7 @@ $vegetariano    = $pdo->query("SELECT COUNT(*) FROM participantes WHERE tipo_chu
 require_once 'includes/cabecalho.php';
 ?>
 
+<link rel="stylesheet" href="../css/estilo.css">
 <div class="dashboard">
     <h2>CHURRASCO DA SEMANA FARROUPILHA</h2>
     
