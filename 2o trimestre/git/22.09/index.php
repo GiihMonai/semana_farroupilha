@@ -1,5 +1,4 @@
 <?php
-require_once 'includes/verificar_login.php';
 require_once 'config/conexao.php';
 
 // Exercício 16: Consultas calculadas diretamente no banco de dados
